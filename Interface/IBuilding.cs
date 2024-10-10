@@ -1,14 +1,25 @@
 ﻿using ElevatorManagementSystem.Classes;
 
-
 namespace ElevatorManagementSystem.Interface
 {
-     interface IBuilding
+    /// <summary>
+    /// Defines the contract for a building that manages elevators.
+    /// </summary>
+    public interface IBuilding
     {
-        public int Floors { get; }
-        public List<Elevator> Elevators { get; }
-        public void Start();
+        /// <summary>
+        /// Gets the total number of floors in the building.
+        /// </summary>
+        int Floors { get; }
 
+        /// <summary>
+        /// Gets the list of elevators in the building.
+        /// </summary>
+        List<Elevator> Elevators { get; }
 
+        /// <summary>
+        /// Starts the elevator management system, initiating operations for all elevators.
+        /// </summary>
+        void Start();
     }
 }
